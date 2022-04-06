@@ -3,7 +3,6 @@ from lib.extensions import db, migrate
 from config.config import database_uri, secret_key
 from routes.home import home
 from routes.auth import auth
-from routes.contacts import contacts
 
 def create_app():
     app = Flask(__name__)
@@ -17,5 +16,4 @@ def create_app():
     #Rutas
     app.register_blueprint(home)
     app.register_blueprint(auth)
-    app.register_blueprint(contacts)
     return app
